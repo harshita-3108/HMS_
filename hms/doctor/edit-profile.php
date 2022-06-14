@@ -2,7 +2,7 @@
 session_start();
 error_reporting(0);
 include('include/config.php');
-include('include/checklogin.php');
+
 if(isset($_POST['submit']))
 {
 	$docspecialization=$_POST['Doctorspecialization'];
