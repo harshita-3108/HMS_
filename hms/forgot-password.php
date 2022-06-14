@@ -2,7 +2,6 @@
 session_start();
 error_reporting(0);
 include("include/config.php");
-//Checking Details for reset password
 if(isset($_POST['submit'])){
 $name=$_POST['fullname'];
 $email=$_POST['email'];
