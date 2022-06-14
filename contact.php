@@ -5,11 +5,9 @@ if(isset($_POST['submit']))
 $name=$_POST['fullname'];
 $email=$_POST['emailid'];
 $mobileno=$_POST['mobileno'];
-$dscrption=$_POST['description'];
-$query=mysqli_query($con,"insert into tblcontactus(fullname,email,contactno,message) value('$name','$email','$mobileno','$dscrption')");
+$description=$_POST['description'];
+$query=mysqli_query($con,"insert into tblcontactus(fullname,email,contactno,message) value('$name','$email','$mobileno','$description')");
 echo "<script>alert('Your information succesfully submitted');</script>";
-echo "<script>window.location.href ='contact.php'</script>";
-
 }
 
 
@@ -22,17 +20,13 @@ echo "<script>window.location.href ='contact.php'</script>";
 		<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<!--start-wrap-->
-		
-			<!--start-header-->
 			<div class="header">
 				<div class="wrap">
-				<!--start-logo-->
+				
 				<div class="logo">
 		<a href="index.html" style="font-size: 30px;">DigiCure</a> 
 				</div>
-				<!--end-logo-->
-				<!--start-top-nav-->
+				
 				<div class="top-nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -41,9 +35,9 @@ echo "<script>window.location.href ='contact.php'</script>";
 					</ul>					
 				</div>
 				<div class="clear"> </div>
-				<!--end-top-nav-->
+				
 			</div>
-			<!--end-header-->
+			
 		</div>
 		    <div class="clear"> </div>
 		   <div class="wrap">
@@ -107,7 +101,6 @@ echo "<script>window.location.href ='contact.php'</script>";
 		   	<div class="clear"> </div>
 		   </div>
 		   </div>
-		<!--end-wrap-->
 	</body>
 </html>
 
