@@ -47,7 +47,7 @@ include('helper/config.php');
 								<div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body" style="background: aliceblue;">
-											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
+											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse" style="background:purple;"></i> </span>
 											<h2 class="StepTitle">Manage Users</h2>
 											
 											<p class="links cl-effect-1">
@@ -65,7 +65,7 @@ $num_rows = mysqli_num_rows($result);
 								<div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body" style="background: aliceblue;">
-											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
+											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse" style="background:purple;"></i> </span>
 											<h2 class="StepTitle">Manage Doctors</h2>
 										
 											<p class="cl-effect-1">
@@ -84,7 +84,7 @@ $num_rows1 = mysqli_num_rows($result1);
 								<div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body" style="background: aliceblue;">
-											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
+											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse" style="background:purple;"></i> </span>
 											<h2 class="StepTitle"> Appointments</h2>
 											
 											<p class="links cl-effect-1">
@@ -105,7 +105,7 @@ $num_rows2 = mysqli_num_rows($sql);
 <div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body" style="background: aliceblue;">
-											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
+											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse" style="background:purple;"></i> </span>
 											<h2 class="StepTitle">Manage Patients</h2>
 											
 											<p class="links cl-effect-1">
@@ -129,7 +129,7 @@ Total Patients :<?php echo htmlentities($num_rows);
 			<div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body" style="background: aliceblue;">
-											<span class="fa-stack fa-2x"> <i class="ti-files fa-1x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
+											<span class="fa-stack fa-2x"> <i class="ti-files fa-1x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse" style="background:purple;"></i> </span>
 											<h2 class="StepTitle"> New Queries</h2>
 											
 											<p class="links cl-effect-1">
@@ -157,8 +157,7 @@ $num_rows22 = mysqli_num_rows($sql);
 			</div>
 	<?php include('helper/footer.php');?>
 			
-	<?php include('helper/setting.php');?>
-			<>
+				<>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

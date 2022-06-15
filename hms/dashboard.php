@@ -44,7 +44,7 @@ include('helper/config.php');
 								<div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body" style="background: aliceblue;">
-											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
+											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse" style="background:purple;"></i> </span>
 											<h2 class="StepTitle">My Profile</h2>
 											
 											<p class="links cl-effect-1">
@@ -58,7 +58,7 @@ include('helper/config.php');
 								<div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body" style="background: aliceblue;">
-											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
+											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-paperclip fa-stack-1x fa-inverse" style="background:purple;"></i> </span>
 											<h2 class="StepTitle">My Appointments</h2>
 										
 											<p class="cl-effect-1">
@@ -71,8 +71,8 @@ include('helper/config.php');
 								</div>
 								<div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
-										<div class="panel-body" >
-											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
+										<div class="panel-body" style="background: aliceblue;">
+											<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse" style="background:purple;"></i> </span>
 											<h2 class="StepTitle"> Book My Appointment</h2>
 											
 											<p class="links cl-effect-1">
@@ -92,8 +92,7 @@ include('helper/config.php');
 			</div>
 	<?php include('helper/footer.php');?>
 		
-	<?php include('helper/setting.php');?>
-			<>
+				<>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

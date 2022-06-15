@@ -1,7 +1,7 @@
 <div class="sidebar app-aside" id="sidebar">
 				<div class="sidebar-container perfect-scrollbar">
 
-<nav style="background: #800080ad">
+<nav style="background: #853f95">
 						
 						<!-- start: MAIN NAVIGATION MENU -->
 						<div class="navbar-title">

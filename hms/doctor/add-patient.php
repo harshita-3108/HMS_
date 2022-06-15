@@ -159,7 +159,6 @@ Add
 </div>
 <?php include('helper/footer.php');?>
 			
-<?php include('helper/setting.php');?>
 			
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>

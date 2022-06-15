@@ -1,9 +1,8 @@
 <div class="sidebar app-aside" id="sidebar">
 				<div class="sidebar-container perfect-scrollbar">
 
-<nav style="background: #800080ad">
+<nav style="background: #853f95">
 						
-						<!-- start: MAIN NAVIGATION MENU -->
 						<div class="navbar-title">
 							<span style="color: white;font-weight: bold;font-size: medium;">Main Navigation</span>
 						</div>
@@ -59,7 +58,6 @@
 							</li>
 
 						</ul>
-						<!-- end: CORE FEATURES -->
 						
 					</nav>
 					</div>
