@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('include/config.php');
+include('helper/config.php');
 $_SESSION['login']=="";
 date_default_timezone_set('Asia/Kolkata');
 $ldate=date( 'd-m-Y h:i:s A', time () );

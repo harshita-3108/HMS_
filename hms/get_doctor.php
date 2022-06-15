@@ -1,5 +1,5 @@
 <?php
-include('include/config.php');
+include('helper/config.php');
 if(!empty($_POST["specilizationid"])) 
 {
 

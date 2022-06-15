@@ -1,5 +1,5 @@
 <?php 
-require_once("include/config.php");
+require_once("helper/config.php");
 if(!empty($_POST["emailid"])) {
 	$email= $_POST["emailid"];
 	

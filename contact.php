@@ -1,5 +1,5 @@
 <?php
-include_once('hms/include/config.php');
+include_once('hms/helper/config.php');
 if(isset($_POST['submit']))
 {
 $name=$_POST['fullname'];

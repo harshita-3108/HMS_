@@ -875,9 +875,10 @@ h5.over-title {
   float: left;
   left: 0;
   bottom: 0;
-  background: #f7f7f8;
+  background: purple;
   overflow: visible;
   z-index: 1051;
+  height: 100%;
 }
 #sidebar > div, #sidebar .sidebar-container {
   height: 100%;

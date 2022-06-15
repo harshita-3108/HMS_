@@ -1,5 +1,5 @@
 <?php 
-require_once("include/config.php");
+require_once("helper/config.php");
 if(!empty($_POST["email"])) {
 	$email= $_POST["email"];
 $result =mysqli_query($con,"SELECT PatientEmail FROM tblpatient WHERE PatientEmail='$email'");
