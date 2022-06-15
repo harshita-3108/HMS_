@@ -2,7 +2,6 @@
 session_start();
 error_reporting(0);
 include('helper/config.php');
-
 if(isset($_GET['cancel']))
 		  {
 mysqli_query($con,"update appointment set doctorStatus='0' where id ='".$_GET['id']."'");
