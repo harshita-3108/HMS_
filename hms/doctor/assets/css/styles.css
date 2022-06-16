@@ -4305,7 +4305,7 @@ a.text-light:hover {
 }
 .btn {
   background: purple  !important;
-  color: white !important;
+  color: white;
 }
 /* ---------------------------------------------------------------------- */
 /*  Animations

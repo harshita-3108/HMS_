@@ -21,9 +21,6 @@ $sql=mysqli_query($con,"select * from appointment where doctorId='$doctorid' && 
 $num=mysqli_fetch_array($sql);
 if($num>0)
 {
-	$extra="book-appointment.php";//
-	$host=$_SERVER['HTTP_HOST'];
-	$uip=$_SERVER['REMOTE_ADDR'];
 	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
 	echo "<script>alert('Oops !! Sorry..Doctor is busy. Choose another doctor or slot.');</script>";
     echo "<script>window.location.href ='book-appointment.php'</script>";

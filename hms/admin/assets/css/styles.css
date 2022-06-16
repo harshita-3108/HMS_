@@ -7652,7 +7652,7 @@ input[type="radio"], input[type="checkbox"] {
   border-color: white;
 }
 .btn-light-grey:hover {
-  background-color: white !important;
+  background-color: white;
   border-color: white;
   color: #8e8e93;
 }

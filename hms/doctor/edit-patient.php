@@ -17,7 +17,6 @@ $meet_link=$_POST['meet_link'];
 $pdf_file=$_POST['pdf_file'];
 
 $sql=mysqli_query($con,"update appointment set meet_link='$meet_link'");
-$sql=mysqli_query($con,"update appointment set pescription='$pdf_file'");
 
 // $sql=mysqli_query($con,"update appointment set meet_link='$meet_link' where userID = (select users.id from users where fullName = '$patname'");
 $sql=mysqli_query($con,"update tblpatient set PatientName='$patname',PatientContno='$patcontact',PatientEmail='$patemail',PatientGender='$gender',PatientAdd='$pataddress',PatientAge='$patage',PatientMedhis='$medhis' where ID='$eid'");
@@ -142,12 +141,6 @@ Patient Address
 <textarea type="text" name="meet_link" class="form-control"  placeholder="Enter meet link" required="true"><?php  echo $row['meet_link'];?></textarea>
 </div>	
 
-<div class="form-group">
-<label for="fess">
-Upload Pescription</label>
-<input type="file" name="pdf_file" id="pdf_file" accept="application/pdf" />
-<!-- <button id="send" type="submit" name="submit" class="btn btn-success">Submit</button> -->
-</div>
 
 
 <div class="form-group">

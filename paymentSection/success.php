@@ -38,7 +38,7 @@ if(isset($_POST['submit']))
         Payment Successfull. Redirecting to Appointment History
         </p>
         <br>
-        <form action="post"><button name="submit" class="button -primary"><a href="../hms/appointment-history.php">
+        <form action="post"><button name="submit" class="button -primary" style="color:white;"><a href="../hms/appointment-history.php">
 													Click Here
 												</a></button></form>
     </div>
