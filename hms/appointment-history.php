@@ -99,9 +99,9 @@ if(($row['userStatus']==1) && ($row['doctorStatus']==0))
 {
 	echo "Cancel by Doctor";
 }
-if(($row['userStatus']==2))
+if($row['userStatus']==2)
 {
-	echo "Incomplete payment-Cancelled"
+	echo "Incomplete payment-Cancelled";
 }
 
 

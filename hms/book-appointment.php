@@ -17,13 +17,26 @@ $_SESSION['doctorid'] = $doctorid;
 $_SESSION['userid'] = $userid;
 $_SESSION['appointmentDate'] = $appdate;
 
-$query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,userId,consultancyFees,appointmentDate,appointmentTime,userStatus,doctorStatus) values('$specilization','$doctorid','$userid','$fees','$appdate','$time','$userstatus','$docstatus')");
-$extra="../paymentModule/index.php";//
-$host=$_SERVER['HTTP_HOST'];
-$uip=$_SERVER['REMOTE_ADDR'];
-$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");	
+$sql=mysqli_query($con,"select * from appointment where doctorId='$doctorid' && appointmentDate='$appdate' && appointmentTime='$time' && userStatus='1' && doctorStatus='1' ");
+$num=mysqli_fetch_array($sql);
+if($num>0)
+{
+	$extra="book-appointment.php";//
+	$host=$_SERVER['HTTP_HOST'];
+	$uip=$_SERVER['REMOTE_ADDR'];
+	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	echo "<script>alert('Oops !! Sorry..Doctor is busy. Choose another doctor or slot.');</script>";
+    echo "<script>window.location.href ='book-appointment.php'</script>";
 
+}
+else{
+	$query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,userId,consultancyFees,appointmentDate,appointmentTime,userStatus,doctorStatus) values('$specilization','$doctorid','$userid','$fees','$appdate','$time','$userstatus','$docstatus')");
+	$extra="../paymentModule/index.php";//
+	$host=$_SERVER['HTTP_HOST'];
+	$uip=$_SERVER['REMOTE_ADDR'];
+	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+	header("location:http://$host$uri/$extra");	
+}
 }
 ?>
 <!DOCTYPE html>
@@ -36,6 +49,8 @@ header("location:http://$host$uri/$extra");
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
+		<link href="dependency/bootstrap-datepicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" media="screen">
+		<link href="dependency/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
 
 		<script>
 function getdoctor(val) {
@@ -168,7 +183,6 @@ while($row=mysqli_fetch_array($ret))
 															</label>
 			<input class="form-control" name="apptime" id="timepicker1" required="required">eg : 10:00 PM
 														</div>														
-														
 														<button type="submit" name="submit" class="btn btn-o btn-primary">
 															Book & Make Payment
 														</button>
@@ -195,7 +209,8 @@ while($row=mysqli_fetch_array($ret))
 		<script src="dependency/bootstrap/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" integrity="sha512-aUhL2xOCrpLEuGD5f6tgHbLYEXRpYZ8G5yD+WlFrXrPy2IrWBlu6bih5C9H6qGsgqnU6mgx6KtU8TreHpASprw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="assets/js/main.js"></script>
-
+		<script src="dependency/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+		<script src="dependency/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
 		<script>
 			jQuery(document).ready(function() {
 				Main.init();
