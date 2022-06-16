@@ -170,7 +170,7 @@ while($row=mysqli_fetch_array($ret))
 														</div>														
 														
 														<button type="submit" name="submit" class="btn btn-o btn-primary">
-															Submit
+															Book & Make Payment
 														</button>
 													</form>
 												</div>

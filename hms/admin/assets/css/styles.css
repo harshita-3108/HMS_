@@ -5755,6 +5755,7 @@ input[type="radio"], input[type="checkbox"] {
   outline: none !important;
   position: relative;
   background: purple  !important;
+  color: white;
 }
 
 .btn:after {
