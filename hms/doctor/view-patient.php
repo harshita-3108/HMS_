@@ -12,9 +12,10 @@ if(isset($_POST['submit']))
     $weight=$_POST['weight'];
     $temp=$_POST['temp'];
    $pres=$_POST['pres'];
-   
+   $pdf_file=$_POST['pdf_file'];
+
  
-      $query.=mysqli_query($con, "insert   tblmedicalhistory(PatientID,BloodPressure,BloodSugar,Weight,Temperature,MedicalPres)value('$vid','$bp','$bs','$weight','$temp','$pres')");
+      $query=mysqli_query($con, "insert into  tblmedicalhistory(PatientID,BloodPressure,BloodSugar,Weight,Temperature,MedicalPres,pescription)value('$vid','$bp','$bs','$weight','$temp','$pres','$pdf_file')");
     if ($query) {
     echo '<script>alert("Medicle history has been added.")</script>';
     echo "<script>window.location.href ='manage-patient.php'</script>";
@@ -122,6 +123,7 @@ $ret=mysqli_query($con,"select * from tblmedicalhistory  where PatientID='$vid'"
 <th>Body Temprature</th>
 <th>Medical Prescription</th>
 <th>Visit Date</th>
+<th>Pescription</th>
 </tr>
 <?php  
 while ($row=mysqli_fetch_array($ret)) { 
@@ -134,6 +136,28 @@ while ($row=mysqli_fetch_array($ret)) {
   <td><?php  echo $row['Temperature'];?></td>
   <td><?php  echo $row['MedicalPres'];?></td>
   <td><?php  echo $row['CreationDate'];?></td> 
+  <td>
+        <?php
+          // $query = $dbh->prepare($ret);  
+          // $results=$query->fetchAll(PDO::FETCH_OBJ);
+          // if($query->rowCount() > 0)
+          // {
+          //     foreach($results as $result)
+          //     {
+          //          header('Content-Type:application/pdf');
+          //          echo $result->pescription;
+          //     }
+          // }
+          header('Content-type: application/pdf');
+          header('Content-Transfer-Encoding: binary');
+          header('Accept-Ranges: bytes');
+          header('Content-Disposition: attachment; filename="'.$row['pescription'].'"');
+          echo $row['pescription'];
+        ?>
+  
+
+
+ </td> 
 </tr>
 <?php $cnt=$cnt+1;} ?>
 </table>
@@ -181,6 +205,11 @@ while ($row=mysqli_fetch_array($ret)) {
     <th>Prescription :</th>
     <td>
     <textarea name="pres" placeholder="Medical Prescription" rows="12" cols="14" class="form-control wd-450" required="true"></textarea></td>
+  </tr> 
+  <tr>
+    <th>Upload Prescription :</th>
+    <td><input type="file" name="pdf_file" id="pdf_file" accept="application/pdf" />
+</td>
   </tr>  
    
 </table>
