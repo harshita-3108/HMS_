@@ -60,7 +60,7 @@ if(isset($_GET['del']))
 												<th class="hidden-xs">Email</th>
 												<th>Contact No. </th>
 												<th>Message </th>
-												<th>Action</th>
+												<th>View your action</th>
 												
 											</tr>
 										</thead>

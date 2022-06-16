@@ -8,6 +8,40 @@ if(isset($_POST['update']))
 $qid=intval($_GET['id']);
 $adminremark=$_POST['adminremark'];
 $isread=1;
+
+//-----------------------------------send email code start---------------------------------
+
+$sql=mysqli_query($con,"select * from tblcontactus where id='$qid'");
+while($row=mysqli_fetch_array($sql))
+{
+	$mailto = $row['email']; 
+	$name = $row['fullname']; 
+	$fromEmail = "helpdesk@digicure.com";
+	$phone = $row['contactno'];
+	$subject = "DigiCure | Response to your query";
+	$rermark =  $adminremark;
+
+	$message = "User Name: " . $name . "\n"
+	. "Phone Number: " . $phone . "\n\n"
+	. "query: " . "\n" . $row['message'] . "\n\n"
+	. "Admin Remark" . "\n" . $rermark;
+
+	$headers = "From: helpdesk@digicure.com"; 
+
+	$result1 = mail($mailto, $subject, $message, $headers); 
+
+ //Checking if Mails sent successfully
+
+	// if ($result1) {
+	// $success = "Your Message was sent Successfully!";
+	// } else {
+	// $failed = "Sorry! Message was not sent, Try again Later.";
+	// }
+	// }
+	}
+//------------------------------------send email code end ---------------------------
+
+
 $query=mysqli_query($con,"update tblcontactus set  AdminRemark='$adminremark',IsRead='$isread' where id='$qid'");
 if($query){
 echo "<script>alert('Admin Remark updated successfully.');</script>";
